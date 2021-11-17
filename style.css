@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,6 +8,7 @@
 :root {
   --background-black: #181818;
   --border-color: #ff3300;
+  --font-color-for-selector: #5a5a5a;
 }
 
 body {
@@ -38,7 +41,8 @@ body {
   color: var(--border-color);
 }
 .nav ul li {
-  text-transform: uppercase;
+  font-family: monospace;
+  text-transform: lowercase;
   text-align: center;
   margin: 25px 0 0 0;
   font-size: 12px;
@@ -80,6 +84,7 @@ body {
   background-color: var(--background-black);
   border-radius: 0 30px 30px 0;
   transition: 0.7s;
+  z-index: 100;
 }
 .link-container.show {
   transform: translateX(0);
@@ -98,13 +103,83 @@ body {
 .media-link .link-container > a :hover {
   color: var(--border-color);
 }
-/* main 
+
+/* main */
 .main {
-  position: fixed;
-  top: 0;
+  position: absolute;
   right: 0;
-  background-color: #fff;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-black);
   height: 100vh;
   width: 95vw;
 }
-*/
+
+.main .content-container {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  position: relative;
+  font-family: monospace;
+  border: 3px solid var(--border-color);
+  border-radius: 20px;
+  height: 500px;
+  width: 1200px;
+  padding: 60px;
+}
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--border-color);
+  margin-right: 60px;
+}
+
+h1::before {
+  content: '<h1>';
+}
+h1::after {
+  content: '</h1>';
+}
+h1::before,
+h1::after {
+  font-size: 15px;
+  color: var(--font-color-for-selector);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.text-container p {
+  font-family: 'Red Hat Mono', monospace;
+  margin-top: 30px;
+}
+p::before {
+  content: '<p>';
+}
+p::after {
+  content: '</p>';
+}
+p::before,
+p::after {
+  font-size: 15px;
+  color: var(--font-color-for-selector);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.content-container button {
+  position: absolute;
+  bottom: 30px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  padding: 15px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+.content-container button:hover {
+  color: var(--background-black);
+  transition: 0.3s;
+  background-color: var(--border-color);
+}
