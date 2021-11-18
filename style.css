@@ -200,12 +200,13 @@ p::after {
 
 /*styling of CONTACT PAGE*/
 .contact-page {
+  overflow: visible;
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   width: 93vw;
-  background-color: #fff;
+  background-color: var(--background-black);
   display: flex;
 }
 /*Here starts Form mormating*/
@@ -217,13 +218,15 @@ p::after {
   margin: 30px 0;
 }
 .form-container p {
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
   width: 100%;
   line-height: 1.3rem;
   letter-spacing: 0.5px;
 }
 /*general inputs*/
 input {
+  font-size: 15px;
+  color: #fff;
   background-color: var(--background-white-black);
   padding: 10px;
   border: none;
@@ -245,11 +248,16 @@ input:focus {
   flex-direction: column;
 }
 textarea {
+  color: #fff;
+  font-size: 15px;
   padding: 10px 15px;
   margin: 5px;
   border: none;
-  width: 98%;
+  max-width: 98%;
   background-color: var(--background-white-black);
+}
+textarea:focus {
+  outline: none;
 }
 form::before {
   content: '<form autocomplete="off">';
@@ -271,7 +279,22 @@ form::after {
 }
 
 /*right hand side which is map page*/
-.contact-page .map {
+.map-container {
   width: 50%;
   background-color: var(--background-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  margin: 0;
+  padding: 20px;
+  border-left: 3px solid var(--border-color);
+}
+
+.map-container .map {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  margin-bottom: 30px;
 }
