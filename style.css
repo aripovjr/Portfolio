@@ -150,6 +150,16 @@ h1::after {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.text-container h1 > span::before {
+  content: '<br>';
+  position: absolute;
+  top: 189px;
+  left: 625px;
+  font-size: 15px;
+  color: var(--font-color-for-selector);
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .text-container p {
   font-family: 'Red Hat Mono', monospace;
   margin-top: 30px;
@@ -169,6 +179,7 @@ p::after {
 
 .content-container button {
   position: absolute;
+  left: 80px;
   bottom: 30px;
   background-color: transparent;
   border: 1px solid var(--border-color);
