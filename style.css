@@ -7,6 +7,7 @@
 
 :root {
   --background-black: #181818;
+  --background-white-black: #1d1d1d;
   --border-color: #ff3300;
   --font-color-for-selector: #5a5a5a;
 }
@@ -15,7 +16,6 @@ body {
   font-family: sans-serif;
   display: flex;
   height: 100vh;
-  background-color: var(--background-black);
   color: #fff;
   overflow: hidden;
 }
@@ -30,7 +30,7 @@ body {
   left: 0;
   top: 0;
   height: 100vh;
-  width: 5vw;
+  width: 7vw;
   border-right: 2px solid var(--border-color);
 }
 .nav ul {
@@ -114,7 +114,7 @@ body {
   justify-content: center;
   background-color: var(--background-black);
   height: 100vh;
-  width: 95vw;
+  width: 93vw;
 }
 
 .main .content-container {
@@ -144,7 +144,9 @@ h1::after {
   content: '</h1>';
 }
 h1::before,
-h1::after {
+h1::after,
+form::before,
+form::after {
   font-size: 15px;
   color: var(--font-color-for-selector);
   font-family: 'Courier New', Courier, monospace;
@@ -177,7 +179,7 @@ p::after {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.content-container button {
+.content-container > button {
   position: absolute;
   left: 80px;
   bottom: 30px;
@@ -189,8 +191,87 @@ p::after {
   font-weight: bold;
   cursor: pointer;
 }
-.content-container button:hover {
+.content-container button:hover,
+.form-container button:hover {
   color: var(--background-black);
   transition: 0.3s;
   background-color: var(--border-color);
+}
+
+/*styling of CONTACT PAGE*/
+.contact-page {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 93vw;
+  background-color: #fff;
+  display: flex;
+}
+/*Here starts Form mormating*/
+.contact-page .form-container {
+  position: relative;
+  width: 50%;
+  background-color: var(--background-black);
+  padding: 20px 60px;
+  margin: 30px 0;
+}
+.form-container p {
+  margin: 20px 0;
+  width: 100%;
+  line-height: 1.3rem;
+  letter-spacing: 0.5px;
+}
+/*general inputs*/
+input {
+  background-color: var(--background-white-black);
+  padding: 10px;
+  border: none;
+  margin: 5px;
+}
+input:focus {
+  outline: none;
+}
+/*Name and Email inputs*/
+.form-container .column {
+  display: flex;
+}
+.column input {
+  width: 50%;
+}
+/*Subject and textarea*/
+.row {
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  width: 98%;
+  background-color: var(--background-white-black);
+}
+form::before {
+  content: '<form autocomplete="off">';
+}
+form::after {
+  content: '<form>';
+}
+.form-container button {
+  margin: 15px 60px auto;
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  padding: 15px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*right hand side which is map page*/
+.contact-page .map {
+  width: 50%;
+  background-color: var(--background-black);
 }
