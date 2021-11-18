@@ -8,7 +8,14 @@
     <title>Contact me</title>
 </head>
 <body>
-
+    <nav class="nav">
+        <ul id="lists">
+            <li><a href=""> <i class="fas fa-home"> </i> </a>.home()</li>
+            <li><a href=""> <i class="fas fa-user"> </i> </a>.about()</li>
+            <li><a href=""> <i class="fas fa-file-code"> </i> </a>.projects()</li>
+            <li><a href="contact.html"> <i class="fas fa-envelope"> </i> </a>.contact()</li>
+        </ul>
+   </nav>
 
     <div class="contact-page">
         <div class="form-container">
@@ -28,10 +35,13 @@
         </div>
 
         <div class="map-container">
-            
+            <div class="map" id="map"></div>
+            <h3>Nodays, I'm in Turkey</h3>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBysFq2Hpx22R8EvHyyCkS2BLjyBh3R59I&callback=initMap"></script>
+    
 </body>
 </html>
