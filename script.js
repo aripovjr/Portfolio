@@ -11,6 +11,7 @@ hideBtn.addEventListener('click', ()=>{
 })
 //finish the code above
 
+
 //auto text effect for p in the main page 
 const textEl = document.getElementById('text')
 const speedRange = 8
