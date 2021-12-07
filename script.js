@@ -30,8 +30,6 @@ function writeText(){
 //finish the code above
 
 //Generate API of google for map
-initMap()
-
 function initMap(){
     var location = {lat: 51.776016, lng: 19.485582}
     var current_location = {lat: 40.974026, lng: 29.151094}
@@ -48,3 +46,4 @@ function initMap(){
         map: map
     }) 
 }
+initMap()
