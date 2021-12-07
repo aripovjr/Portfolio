@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+  --background-black: #181818;
+  --background-white-black: #1d1d1d;
+  --border-color: #ff3300;
+  --font-color-for-selector: #5a5a5a;
+}
+
+.about-me-main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 93vw;
+  height: 100%;
+  background-color: var(--background-black);
+  display: flex;
+  padding: 30px;
+  overflow: auto;
+}
+
+.intro {
+  max-width: 600px;
+}
+
+.me-text {
+  letter-spacing: 1px;
+  padding: 15px;
+}
