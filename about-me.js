@@ -1,21 +1,11 @@
 const down = document.querySelectorAll('.down')  
 const up = document.querySelectorAll('.up')  
 const btnExpand = document.querySelectorAll('#button')
-const btnShorten = document.querySelectorAll('#cut')
+const icon = document.getElementById('icon')
 
 btnExpand.forEach(item=>{
     item.addEventListener('click', ()=>{
-       item.parentElement.classList.add('height')  
-       down.forEach(item=>item.style.display = 'none')
-       up.forEach(item=>item.style.display = 'initial') 
+       item.parentElement.classList.toggle('height')  
+       item.childNodes[0].classList.toggle('rotated')
 })
-})
-
-btnShorten.forEach(item=>{
-    item.addEventListener('click', ()=>{
-        item.parentElement.classList.remove('height')
-            down.forEach(item=>item.style.display = 'initial')
-            up.forEach(item=>item.style.display = 'none') 
-        
-    })
 })
