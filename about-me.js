@@ -1,11 +1,15 @@
-const down = document.querySelectorAll('.down')  
-const up = document.querySelectorAll('.up')  
-const btnExpand = document.querySelectorAll('#button')
-const icon = document.getElementById('icon')
+//skills
 
-btnExpand.forEach(item=>{
-    item.addEventListener('click', ()=>{
-       item.parentElement.classList.toggle('height')  
-       item.childNodes[0].classList.toggle('rotated')
-})
+
+
+//about me and skills
+const main = document.querySelector('main') 
+const aboutMe = document.querySelector('.about-me')
+const skills = document.querySelectorAll('.skills') 
+
+main.addEventListener("scroll", ()=>{
+    aboutMe.classList.add('show')
+    skills.forEach(skill=>{
+        skill.classList.add('show')
+    })
 })
