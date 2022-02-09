@@ -18,58 +18,14 @@
   background-color: var(--background-black);
   display: flex;
   padding: 40px;
-  overflow: auto;
   flex-direction: column;
   transition: 0.6s smooth;
+  overflow-x: hidden;
 }
 .wrap {
   display: flex;
 }
-.intro {
-  width: 100%;
-  margin: 10px 20px;
-}
-.intro h1 {
-  margin-bottom: 20px;
-}
 
-.me-text {
-  letter-spacing: 1px;
-  padding: 15px;
-  line-height: 25px;
-  margin-bottom: 30px;
-}
-
-.expand {
-  border: 3px solid var(--border-color);
-  border-radius: 20px;
-  overflow: hidden;
-  height: 20vh;
-  position: relative;
-  transition: 0.8s;
-}
-.height {
-  height: 70vh;
-}
-.btn-expand {
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  border: 0;
-  font-size: 20px;
-  background-color: var(--background-white-black);
-  color: #ff3300;
-  cursor: pointer;
-}
-.btn-expand:hover {
-  background-color: var(--background-black);
-}
-.rotated {
-  transform: rotate(180deg);
-}
 .techs {
   display: flex;
   flex-direction: column;
@@ -147,11 +103,14 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: translateX(-300%);
+  transition: 0.9s ease-out
 }
 .about-me img{
   margin: 10px;
 }
 .about-me p{
+  transition: 0.4s;
   margin: 10px;
   text-align: center;
 }
@@ -159,7 +118,6 @@ h2 {
   color: #f06529;
   text-decoration: none;
 }
-
 
 .percentage-holder{
   width: 50%;
@@ -172,6 +130,15 @@ h2 {
   margin: 15px;
   font-weight: bold;
   width: 100%;
+  transform: translateX(300%);
+  transition: 0.9s;
+}
+
+.skills:nth-child(even){
+  transition: 0.9s;
+}
+.skills:nth-child(odd){
+  transition: 0.6s;
 }
 .skills span{
   padding: 7px;
@@ -193,10 +160,16 @@ h2 {
   width: 15%;
 }
 .skills p{
-  background-color: #eb401a;
+  background-color: #c44a2e;
   width: 100px;
   text-align: center;
   padding: 7px;
+}
+
+
+.show{
+  transform: translateX(0);
+  transition: 0.9s;
 }
 
 @media only screen and (max-width: 770px) {
@@ -238,6 +211,25 @@ h2 {
   }
   .skill i {
     font-size: 80px;
+  }
+  .percentage-holder{
+    padding: 2px;
+  }
+  .about-me p{
+    margin: 1px;
+    font-size: 15px;
+  }
+  .about-me img{
+    width: 80px;
+    height: 80px;
+    margin: 2px;
+  }
+  .skills p, .skills span{
+    font-size: 14px;
+    padding: 2px;
+  }
+  .skills{
+    margin: 7px;
   }
 }
 
