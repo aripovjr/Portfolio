@@ -29,6 +29,8 @@ function writeText(){
 }
 //finish the code above
 
+
+
 //Generate API of google for map
 function initMap(){
     var location = {lat: 51.776016, lng: 19.485582}
