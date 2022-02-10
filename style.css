@@ -416,3 +416,70 @@ form::after {
     max-height: 300px;
   }
 }
+
+/*PROJECT*/
+
+.project-main{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 93vw;
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-black);
+}
+
+.project-title{
+  color: #181818;
+  text-transform: uppercase;
+  text-align: center;
+}
+.project-main h1::before, .project-main h1::after{
+  content: '';
+}
+
+.projects-container{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100vh;
+}
+.projects-container p::after, .projects-container p::before{
+  content: '';
+}
+.project{
+  width: 280px;
+  height: 200px;
+  background-color: var(--background-white-black);
+  margin: 10px;
+  border-radius: 0 0 7px 7px;
+  transition: 0.7s;
+}
+.project:hover{
+  transform: scale(0.90);
+}
+.project img{
+  height: 150px;
+  width: 280px;
+  border: 0;
+  border-radius: 0;
+  width: 280px;
+}
+.project p a{
+  color: #fff;
+}
+.project a{
+  text-align: center;
+  color: #ff3300;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.btn-links{
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-evenly;
+}
