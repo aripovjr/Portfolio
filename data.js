@@ -77,5 +77,23 @@ const projects = [
     link: 'https://github.com/aripovjr/Testimonial-Box-Switcher',
     website: 'https://dazzling-roentgen-6c87b6.netlify.app/'
     },
+    {
+    img: './images/pagination.png',
+    title: 'testimonial',
+    link: 'https://github.com/aripovjr/Testimonial-Box-Switcher',
+    website: 'https://dazzling-roentgen-6c87b6.netlify.app/'
+    },
+    {
+    img: './images/pagination.png',
+    title: 'testimonial',
+    link: 'https://github.com/aripovjr/Testimonial-Box-Switcher',
+    website: 'https://dazzling-roentgen-6c87b6.netlify.app/'
+    },
+    {
+    img: './images/pagination.png',
+    title: 'testimonial',
+    link: 'https://github.com/aripovjr/Testimonial-Box-Switcher',
+    website: 'https://dazzling-roentgen-6c87b6.netlify.app/'
+    },
 ]
 export default projects
