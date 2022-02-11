@@ -8,6 +8,19 @@
   --border-color: #ff3300;
   --font-color-for-selector: #5a5a5a;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 5px orangered;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: var(--border-color);
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(139, 43, 8);
+}
 
 .about-me-main {
   position: absolute;
@@ -17,7 +30,7 @@
   height: 100%;
   background-color: var(--background-black);
   display: flex;
-  padding: 40px;
+  padding: 20px;
   flex-direction: column;
   transition: 0.6s smooth;
   overflow-x: hidden;
@@ -32,12 +45,11 @@
   align-items: center;
   width: 100%;
   height: auto;
-  padding: 1px;
 }
 h2 {
   text-align: center;
-  margin: 20px;
-  font-size: 40px;
+  margin: 10px;
+  font-size: 30px;
   width: 100%;
 }
 .skill-container {
@@ -80,10 +92,13 @@ h2 {
 
 .skill i {
   margin: 10px;
-  font-size: 150px;
+  font-size: 90px;
 }
 .skill:hover {
   transform: scale(1);
+}
+.skill .title{
+  color: #969696;
 }
 
 
@@ -165,11 +180,17 @@ h2 {
   text-align: center;
   padding: 7px;
 }
-
-
 .show{
   transform: translateX(0);
   transition: 0.9s;
+}
+
+.text-tech{
+  font-size: 18px;
+  margin-top: 3px;
+}
+.text-tech span{
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 770px) {
@@ -198,7 +219,7 @@ h2 {
     padding: 10px;
   }
   h2 {
-    font-size: 30px;
+    font-size: 10px;
     margin: 0;
   }
   .skill-container {
@@ -246,6 +267,11 @@ h2 {
   h1,
   h2{
     font-size: 15px;
+  }
+
+  .skill-percentage{
+    flex-direction: column;
+    align-items: center;
   }
 
 }
