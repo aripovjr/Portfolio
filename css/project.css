@@ -65,3 +65,12 @@
     display: flex;
     justify-content: space-evenly;
   }
+
+  @media only screen and (max-width: 770px){
+    .project-main{
+      top: 10px;
+      margin-left: 0;
+      margin-top: 7%;
+      width: 100vw;
+    }
+  }
