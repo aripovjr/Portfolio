@@ -388,7 +388,7 @@ form::after {
     padding: 10px;
     border: 0;
   }
-  img {
+  .img-container img {
     margin: 30px;
     width: 100px;
     height: 100px;
